@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Currency Converter - JS</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css"
+			integrity="sha512-dUOcWaHA4sUKJgO7lxAQ0ugZiWjiDraYNeNJeRKGOIpEq4vroj1DpKcS3jP0K4Js4v6bXk31AAxAxaYt3Oi9xw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<div id="main">
+			<div id="container" class="relative left-1/2 top-[50vh] -translate-x-1/2 -translate-y-1/2 flex items-center flex-wrep flex-col gap-7 bg-black h-[77vh] w-[55vh] rounded-2xl">
+				<h2 class="font-bold text-sky-400 text-4xl mt-7">Currency Converter</h2>
+				<form action="" class="relative h-[80%] w-[90%] bg-red-400 rounded-3xl">
+					<div
+						id="dropdown"
+						relative
+						class="flex justify-between items-center mt-16 ml-20 mr-20 h-40"
+					>
+						<div id="from">
+							<p class="font-semibold text-center">From:</p>
+							<div class="select-container">
+								<img src="https://flagsapi.com/US/flat/64.png" />
+								<select
+									name="from"
+									class="cursor-pointer hover:bg-zinc-200 rounded-2xl font-semibold text-sm ml-2"
+								>
+									<option value="USD" selected>USD</option>
+									<option value="CAD">CAD</option>
+									<option value="EUR">EUR</option>
+									<option value="AUD">AUD</option>
+									<option value="INR">INR</option>
+									<option value="BDT">BDT</option>
+								</select>
+							</div>
+						</div>
+
+						<div id="exchange" class="font-bold text-3xl">
+							<i class="ri-arrow-left-right-line"></i>
+						</div>
+
+						<div id="to">
+							<p class="font-semibold text-center">To:</p>
+							<div class="select-container">
+								<img src="https://flagsapi.com/BD/flat/64.png" />
+								<select
+									name="to"
+									class="cursor-pointer hover:bg-zinc-200 rounded-2xl font-semibold text-sm ml-2"
+								>
+									<option value="USD">USD</option>
+									<option value="CAD">CAD</option>
+									<option value="EUR">EUR</option>
+									<option value="AUD">AUD</option>
+									<option value="INR">INR</option>
+									<option value="BDT" selected>BDT</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+                    <div id="amount" class="mt-12 flex justify-center">
+                        <span class="mr-2 font-bold text-xl">Enter Amount:</span>
+                        <input class="text-black pl-2" placeholder="Enter amount" type="number" />
+                        <!-- <input class="text-black" placeholder-gray-500 placeholder="Enter amount" value="100" opacity-50 type="number"/> -->
+                    </div>
+
+					<div
+						id="exchange-rate"
+						class="h-[4.5vh] w-[22vh] bg-zinc-700 text-white mt-14 rounded-2xl flex justify-center items-center gap-2 font-bold relative left-1/2 -translate-x-1/2"
+					>
+						<span>Exchange rate:</span>
+						<span id="rate">109</span>
+					</div>
+
+					<div id="button">
+						<button
+							class="hover:bg-zinc-700 bg-black text-white font-bold h-[4.5vh] w-[22vh] rounded-2xl mt-14 relative left-1/2 -translate-x-1/2"
+						>
+							Get total exchange rate
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
